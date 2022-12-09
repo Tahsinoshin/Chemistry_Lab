@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as Icons from "react-icons/fa";
@@ -6,15 +5,18 @@ import "./Topbar.css";
 import { navItems } from "../../components/NavItems";
 import Dropdown from "../../components/dropdown/Dropdown";
 
+let track = 0;
+
 function Topbar() {
-  const [dropdown, setDropdown] = useState(false);
+  const [dropdown, setDropdown] = useState("");
+  console.log(`RERENDER ${track++}`);
 
   return (
     <>
       <nav className="navbar">
         <Link to="/" className="navbar-logo">
-          NATURE
-          <Icons.FaTree />
+          <img id="logo" src="assets/logo.png" alt="logo" />
+          CHEMISTRY
         </Link>
         <ul className="nav-items">
           {navItems.map((item) => {
@@ -23,11 +25,11 @@ function Topbar() {
                 <li
                   key={item.id}
                   className={item.cName}
-                  onMouseEnter={() => setDropdown(true)}
-                  onMouseLeave={() => setDropdown(false)}
+                  onMouseEnter={() => setDropdown("People")}
+                  onMouseLeave={() => setDropdown("")}
                 >
                   <Link to={item.path}>{item.title}</Link>
-                  {dropdown && <Dropdown />}
+                  {dropdown === "People" && <Dropdown type="People" />}
                 </li>
            
               );
@@ -39,11 +41,11 @@ function Topbar() {
               <li
                 key= {item.id}
                 className={item.cName}
-                onMouseEnter={() => setDropdown(true)}
-                onMouseLeave={() => setDropdown(false)}
+                onMouseEnter={() => setDropdown("Publication")}
+                onMouseLeave={() => setDropdown("")}
                 >
                 <Link to={item.path}>{item.title}</Link>
-                {dropdown && <Dropdown />}
+                  {dropdown === "Publication" && <Dropdown type="Publication" />}
               </li>
               ); 
             }

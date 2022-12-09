@@ -1,6 +1,6 @@
 .navbar {
-    height: 10vh;
-    background: #1b1919;
+    height: 25vh;
+    background: #00263e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,4 +42,15 @@
   
   .nav-item a:hover {
     background: rgb(0, 212, 212);
+  }
+
+
+  #logo{
+    height: 100px;
+    width:100px;
+    background:rgb(0, 212, 212);
+  }
+  .img{
+    height: 100px;
+    width: 100px;
   }

@@ -3,7 +3,7 @@ import { peopleDropdown, publicationDropdown } from "../../components/NavItems";
 import { Link } from "react-router-dom";
 import "./Dropdown.css";
 
-function Dropdown() {
+function Dropdown({type}) {
   const [dropdown, setDropdown] = useState(false);
 
   return (
@@ -12,7 +12,7 @@ function Dropdown() {
         className={dropdown ? "people-submenu clicked" : "people-submenu"}
         onClick={() => setDropdown(!dropdown)}
       >
-        {peopleDropdown.map((item) => {
+        {type === "People" || peopleDropdown.map((item) => {
           return (
             <li key={item.id}>
               <Link
@@ -32,7 +32,7 @@ function Dropdown() {
         className={dropdown ? "publication-submenu clicked" : "publication-submenu"}
         onClick={() => setDropdown(!dropdown)}
       >
-        {publicationDropdown.map((item) => {
+        { type === "Publication" ||  publicationDropdown.map((item) => {
           return (
             <li key={item.id}>
               <Link
