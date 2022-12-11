@@ -1,10 +1,12 @@
 .navbar {
     height: 25vh;
+    width: 100%;
     background: #00263e;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    position:fixed;
+}
   
   .navbar-logo {
     color: white;
