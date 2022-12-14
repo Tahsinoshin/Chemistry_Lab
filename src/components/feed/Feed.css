@@ -45,13 +45,16 @@
 .contact{
     width:25%;
     height:100%;
-    margin: left 75px;
+    margin-left: 1200px;
+    margin-top: -600px;
     display:flex;
     float:left;
     
     
 }
 .info{
+
+    
     font: size 20px;
     font-weight: 20px;
     font-family: Roboto;

@@ -1,26 +1,28 @@
+
+
 export const navItems = [
     {
       id: 1,
       title: "Home",
-      path: "../pages/home",
+      path: "/home",
       cName: "nav-item",
     },
     {
       id: 2,
       title: "People",
-      path: "../pages/people",
+      path: "/people",
       cName: "nav-item",
     },
     {
       id: 3,
       title: "Publication",
-      path: "../pages/publication",
+      path: "/publication",
       cName: "nav-item",
     },
     {
       id: 4,
       title: "ResearchFacility",
-      path: "../pages/researchFacility",
+      path: "/researchFacility",
       cName: "nav-item",
     },
   ];
@@ -29,19 +31,19 @@ export const navItems = [
     {
       id: 1,
       title: "Faculties",
-      path: "../pages/faculty",
+      path: "people/faculty",
       cName: "submenu-item",
     },
     {
       id: 2,
       title: "Undergrade",
-      path: "../pages/undergrade",
+      path: "/people/undergrade",
       cName: "submenu-item",
     },
     {
       id: 3,
       title: "Grduate",
-      path: "../pages/graduate",
+      path: "/people/graduate",
       cName: "submenu-item",
     }
 ]
@@ -49,7 +51,7 @@ export const publicationDropdown = [
         {
           id: 1,
           title: "Books",
-          path: "../pages/books",
+          path: "/pages/books",
           cName: "submenu-item",
         },
         {

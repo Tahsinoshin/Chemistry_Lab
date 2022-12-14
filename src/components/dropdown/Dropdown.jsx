@@ -7,7 +7,7 @@ function Dropdown({type}) {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <>
+    <div className="dropdown">
       <ul
         className={dropdown ? "people-submenu clicked" : "people-submenu"}
         onClick={() => setDropdown(!dropdown)}
@@ -47,7 +47,7 @@ function Dropdown({type}) {
         })}
       </ul>
 
-    </>
+    </div>
   );
 }
 

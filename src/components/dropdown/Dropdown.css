@@ -4,11 +4,13 @@
     top: 67px;
     list-style: none;
     text-align: start;
+    
   }
   
   .people-submenu li {
     background: rgb(0, 212, 212);
     cursor: pointer;
+    margin: top 10px;
   }
   
   .people-submenu li a:hover {
@@ -30,6 +32,8 @@
   
   .publication-submenu li {
     background: rgb(0, 212, 212);
+    margin: 20px;
+    float:down;
     cursor: pointer;
   }
   
@@ -48,4 +52,8 @@
     text-decoration: none;
     color: white;
     padding: 16px;
+  }
+
+  .dropdown{
+    margin: 2px;
   }

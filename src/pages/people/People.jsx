@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function People() {
   return (
-    <div><h1></h1>people</div>
+    <div><h1>people</h1></div>
   )
 }
