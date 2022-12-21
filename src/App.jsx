@@ -1,4 +1,5 @@
 import './App.css';
+//import '~antd/dist/antd.css';
 import Home from './pages/home/Home';
 import Faculty from './pages/people/faculty/Faculty';
 import Graduate from './pages/people/graduate/Graduate';
