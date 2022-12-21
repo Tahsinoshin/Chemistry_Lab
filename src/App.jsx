@@ -18,10 +18,10 @@ function App() {
           <Route path="/people/faculty" element={<Faculty/>}/>
           <Route path="/people/graduate" element={<Graduate/>}/>
           <Route path="/people/undergraduate" element={<UnderGraduate/>}/>
-          <Route path="/researchfacility" element={<ResearchFacility/>}/>
           <Route path="/publication/book" element={<Book/>}/>
           <Route path="/publication/journal" element={<Journal/>}/>
           <Route path="/publication/conference" element={<Conference/>}/>
+          <Route path="/researchfacility" element={<ResearchFacility/>}/>
         </Routes>
   </Router>
   );

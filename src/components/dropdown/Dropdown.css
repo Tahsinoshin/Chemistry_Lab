@@ -14,11 +14,12 @@
   }
   
   .people-submenu li a:hover {
-    background: rgb(0, 175, 175);
+    background: rgb(165, 236, 236);
   }
   
   .people-submenu.clicked {
     display: none;
+    pointer-events:disabled;
   }
 
 
@@ -38,7 +39,7 @@
   }
   
   .publication-submenu li a:hover {
-    background: rgb(0, 175, 175);
+    background: rgb(171, 252, 252);
   }
   
   .publication-submenu.clicked {
@@ -52,8 +53,9 @@
     text-decoration: none;
     color: white;
     padding: 16px;
+    margin-top: 20px;
   }
 
   .dropdown{
-    margin: 2px;
+    margin-top: 20px;
   }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import * as Icons from "react-icons/fa";
 import "./Topbar.css";
 import { navItems } from "../../components/NavItems";
 import Dropdown from "../../components/dropdown/Dropdown";
@@ -18,6 +17,7 @@ function Topbar() {
           <img id="logo" src="assets/logo.png" alt="logo" />
           CHEMISTRY
         </Link>
+        <div className="title"><p>Natural Product Research Group</p></div>
         <ul className="nav-items">
           {navItems.map((item) => {
             if (item.title === "People") {

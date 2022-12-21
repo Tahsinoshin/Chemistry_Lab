@@ -3,8 +3,8 @@
 export const navItems = [
     {
       id: 1,
-      title: "Home",
-      path: "/home",
+      title: "About",
+      path: "/",
       cName: "nav-item",
     },
     {
@@ -36,8 +36,8 @@ export const navItems = [
     },
     {
       id: 2,
-      title: "Undergrade",
-      path: "/people/undergrade",
+      title: "Undergraduate",
+      path: "/people/undergraduate",
       cName: "submenu-item",
     },
     {
@@ -51,19 +51,19 @@ export const publicationDropdown = [
         {
           id: 1,
           title: "Books",
-          path: "/pages/books",
+          path: "/publication/book",
           cName: "submenu-item",
         },
         {
           id: 2,
           title: "Journals",
-          path: "../pages/journals",
+          path: "/publication/journal",
           cName: "submenu-item",
         },
         {
           id: 3,
           title: "Conference",
-          path: "../pages/conference",
+          path: "/publication/conference",
           cName: "submenu-item",
         }
         
