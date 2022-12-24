@@ -1,5 +1,6 @@
 import './App.css';
 //import '~antd/dist/antd.css';
+//import Topbar from './components/topbar/Topbar';
 import Home from './pages/home/Home';
 import Faculty from './pages/people/faculty/Faculty';
 import Graduate from './pages/people/graduate/Graduate';
@@ -12,6 +13,8 @@ import { BrowserRouter as Router,  Routes, Route } from "react-router-dom";
 
 function App() {
   return (
+    <>
+  
     <Router>
         <Routes>
           <Route exact path="/" element={<Home/>}/>
@@ -25,6 +28,7 @@ function App() {
           <Route path="/researchfacility" element={<ResearchFacility/>}/>
         </Routes>
   </Router>
+  </>
   );
 }
 

@@ -14,7 +14,7 @@ function Topbar() {
     <>
       <nav className="navbar">
         <Link to="/" className="navbar-logo">
-          <img id="logo" src="assets/logo.png" alt="logo" />
+          <img id="logo" src="/assets/logo.png" alt="logo" />
           CHEMISTRY
         </Link>
         <div className="title"><p>Natural Product Research Group</p></div>
