@@ -1,10 +1,12 @@
-import React from 'react'
-import Faculty from './Faculty'
+import React from "react";
+import { useParams } from "react-router-dom";
+import Faculty from "./Faculty";
 
-export default function IndividualFaculty({props}) {
+export default function IndividualFaculty() {
+  const { facultyKey } = useParams();
   return (
     <div>
-      <h1>{props.detail}</h1>
+      <h1>key for this person is {facultyKey}</h1>
     </div>
-  )
+  );
 }

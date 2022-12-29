@@ -10,6 +10,7 @@ import Book from './pages/publication/book/Book';
 import Journal from './pages/publication/journal/Journal';
 import Conference from './pages/publication/conference/Conference';
 import { BrowserRouter as Router,  Routes, Route } from "react-router-dom";
+import IndividualFaculty from './pages/people/faculty/IndividualFaculty';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/publication/journal" element={<Journal/>}/>
           <Route path="/publication/conference" element={<Conference/>}/>
           <Route path="/researchfacility" element={<ResearchFacility/>}/>
+          <Route path='/people/details/:facultyKey' element={<IndividualFaculty/>}/>
         </Routes>
   </Router>
   </>
