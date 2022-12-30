@@ -5,10 +5,10 @@ export default function Searchbar() {
   return (
     <div className='container'>
         
-        <form class="search">
+        <form class="search" onSubmit={(e) => e.preventDefault()}>
             <div class="search__wrapper">
-                <input type="text" name="" placeholder="Search for..." class="search__field" />
-                <button type="submit" class="fa fa-search search__icon"></button>
+                <input type="text" name=""  placeholder="Search for..." class="search__field" />
+                <button type="submit" class="fa fa-search search__icon" ></button>
             </div>
         </form>
     </div>
