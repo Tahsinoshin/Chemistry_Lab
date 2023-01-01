@@ -1,5 +1,5 @@
 .navbar {
-    height: 25vh;
+    height: 20%;
     width: 100%;
     background: #00263e;
     display: flex;
@@ -34,24 +34,24 @@
     height: 10vh;
   }
   
-  .nav-item a {
+  .nav-items a {
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
     margin-right: 2rem;
     padding: 6px 16px;
     border-radius: 5px;
+    position: relative;
+    display: inline-block;
   }
   
-  .nav-item a:hover {
-    background: rgb(0, 212, 212);
+  .nav-items a:hover {
+    color: #da9413;
   }
 
-
   #logo{
-    height: 100px;
-    width:100px;
-    background:rgb(0, 212, 212);
+    height: 80px;
+    width:auto;
     
   }
   .img{
@@ -60,10 +60,14 @@
   }
 
   .title{
-    margin-top:50px;
-    margin-left: -80px;
-    
-   
+    color: white;
+    margin-bottom:20px;
+    margin-left: 1rem;
+  }
+
+  .logo-title{
+    display: inline-flex;
+    flex-direction: row;
   }
 
   p{

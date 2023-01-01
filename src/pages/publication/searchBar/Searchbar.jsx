@@ -4,7 +4,6 @@ import './Searchbar.css'
 export default function Searchbar() {
   return (
     <div className='container'>
-        
         <form class="search" onSubmit={(e) => e.preventDefault()}>
             <div class="search__wrapper">
                 <input type="text" name=""  placeholder="Search for..." class="search__field" />

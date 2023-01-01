@@ -13,11 +13,16 @@ function Topbar() {
   return (
     <>
       <nav className="navbar">
-        <Link to="/" className="navbar-logo">
-          <img id="logo" src="/assets/logo.png" alt="logo" />
-          CHEMISTRY
-        </Link>
-        <div className="title"><p>Natural Product Research Group</p></div>
+        <div className="logo-title">
+          <Link to="/">
+          <img id="logo" href="/" src="/assets/DU.png" alt="logo" />
+          </Link>
+        <div className="titles">
+        <div className="title"><h1>CHEMISTRY</h1></div>
+          <div className="title"><p>Natural Product Research Group</p></div>
+        </div>
+        
+        </div>
         <ul className="nav-items">
           {navItems.map((item) => {
             if (item.title === "People") {

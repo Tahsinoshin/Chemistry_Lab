@@ -1,20 +1,23 @@
 .people-submenu {
-    width: 10rem;
+    width: 12rem;
     position: absolute;
-    top: 67px;
+    top: 30px;
+    left: -180px;
     list-style: none;
     text-align: start;
     
   }
   
   .people-submenu li {
-    background: rgb(0, 212, 212);
+    background: #da9413;
     cursor: pointer;
-    margin: top 10px;
+    padding: 10px 0;
   }
   
   .people-submenu li a:hover {
-    background: rgb(165, 236, 236);
+    background: #f7d28f;
+    border-radius: 0%;
+    transition: 0.3s ease-in-out;
   }
   
   .people-submenu.clicked {
@@ -26,20 +29,23 @@
   .publication-submenu {
     width: 10rem;
     position: absolute;
-    top: 67px;
+    top: 30px;
+    left: -180px;
     list-style: none;
     text-align: start;
   }
   
   .publication-submenu li {
-    background: rgb(0, 212, 212);
-    margin: 20px;
+    background: #da9413;
+    padding: 10px 0;
     float:down;
     cursor: pointer;
   }
   
   .publication-submenu li a:hover {
-    background: rgb(171, 252, 252);
+    transition: 0.3s ease-in-out;
+    background: #f7d28f;
+    border-radius: 0%;
   }
   
   .publication-submenu.clicked {
@@ -53,9 +59,9 @@
     text-decoration: none;
     color: white;
     padding: 16px;
-    margin-top: 20px;
   }
 
   .dropdown{
-    margin-top: 20px;
+    
+    transition: 0.3s ease-in-out;
   }

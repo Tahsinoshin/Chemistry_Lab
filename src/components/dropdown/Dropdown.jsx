@@ -12,7 +12,7 @@ function Dropdown({type}) {
         className={dropdown ? "people-submenu clicked" : "people-submenu"}
         onClick={() => setDropdown(!dropdown)}
       >
-        {type === "People" || peopleDropdown.map((item) => {
+        {type === "Publication" || peopleDropdown.map((item) => {
           return (
             <li key={item.id}>
               <Link
@@ -32,7 +32,7 @@ function Dropdown({type}) {
         className={dropdown ? "publication-submenu clicked" : "publication-submenu"}
         onClick={() => setDropdown(!dropdown)}
       >
-        { type === "Publication" ||  publicationDropdown.map((item) => {
+        { type === "People" ||  publicationDropdown.map((item) => {
           return (
             <li key={item.id}>
               <Link

@@ -1,6 +1,6 @@
 .search {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
@@ -39,7 +39,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #797a7b;
+    background-color: #da9413;
     width: 50px;
     height: 50px;
     font-size: 1.35em;
