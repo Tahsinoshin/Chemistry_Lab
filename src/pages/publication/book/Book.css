@@ -1,9 +1,11 @@
-.container{
+.book-container{
     
     padding: 10px;
+   
 }
 
-.main{
-    margin-top: 300px;
+.book-main{
+    margin-top: 25%;
     display: inline-block;
+    justify-content: center;
 }

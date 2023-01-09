@@ -15,7 +15,7 @@ import IndividualFaculty from './pages/people/faculty/IndividualFaculty';
 function App() {
   return (
     <>
-  
+   
     <Router>
         <Routes>
           <Route exact path="/" element={<Home/>}/>
