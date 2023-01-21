@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Book.css";
 import axios from "axios";
+import Banner from "../banner/Banner";
 
 export default function Book() {
   console.log("running");
@@ -31,43 +32,49 @@ export default function Book() {
     setFilterVal(e.target.value);
   };
   return (
-    <div className="justify-content-center main-div">
-      <div className="shadow-sm p-3 mb-5 bg-body rounded book-container ">
-        <div className="input-box">
-          <input
-            class="fa fa-search"
-            type="text"
-            placeholder="search"
-            value={filterVal}
-            onInput={(e) => {
-              handleFilter(e);
-            }}
-          />
-        </div>
-        <h1>Published Books</h1>
-        <div class="table-responsive-md">
-          <table class="table table-hover table-striped">
-            <tbody>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>usename</th>
-              </tr>
-              {data &&
-                data.map((item) => {
-                  return (
-                    <tr>
-                      <td>{item.name}</td>
-                      <td>{item.email}</td>
-                      <td>{item.username}</td>
-                    </tr>
-                  );
-                })}
-            </tbody>
-          </table>
+    <React.Fragment>
+      <Banner />
+      <div className="justify-content-center main-div">
+        <div className="shadow-sm p-3 mb-5 bg-body rounded book-container ">
+          <div className="input-box">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="search"
+              value={filterVal}
+              onInput={(e) => {
+                handleFilter(e);
+              }}
+            />
+            {/* <SearchIcon /> */}
+          </div>
+          <h1>Published Books</h1>
+          <div class="table-responsive-md">
+            <table class="table table-hover table-striped">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>usename</th>
+                </tr>
+                {data &&
+                  data.map((item) => {
+                    return (
+                      <tr>
+                        <td>{item.name}</td>
+                        <td>{item.email}</td>
+                        <td>{item.username}</td>
+                      </tr>
+                    );
+                  })}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
+    
   );
 }
 
