@@ -34,20 +34,67 @@ export default function Book() {
   return (
     <React.Fragment>
       <Banner />
-      <div className="justify-content-center main-div">
+      <div className="research-container">
+        <div className="shadow-lg p-3 mb-5 bg-body rounded table-section">
+          <h1>Published Books</h1>
+          <div class="table-responsive-md">
+            <table class="table table-hover table-striped">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>usename</th>
+                </tr>
+                {data &&
+                  data.map((item) => {
+                    return (
+                      <tr>
+                        <td>{item.name}</td>
+                        <td>{item.email}</td>
+                        <td>{item.username}</td>
+                      </tr>
+                    );
+                  })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="contact-section">
+          <h1>contact us</h1>
+          <hr></hr>
+          <span>
+              <p>chemistry@gmail.com</p>
+              <p>0123456789</p>
+              <p>mokarram bhaban,university of dhaka</p> 
+          </span>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+}
+
+{
+  /* <div className="justify-content-center main-div">
         <div className="shadow-sm p-3 mb-5 bg-body rounded book-container ">
           <div className="input-box">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input
-              class="form-control"
-              type="text"
-              placeholder="search"
-              value={filterVal}
-              onInput={(e) => {
-                handleFilter(e);
-              }}
-            />
-            {/* <SearchIcon /> */}
+            <form class="search" onSubmit={(e) => e.preventDefault()}>
+              <div class="search__wrapper">
+                <input
+                  type="text"
+                  name=""
+                  placeholder="Search for..."
+                  class="form-control fa fa-search search__icon"
+                  value={filterVal}
+                  onInput={(e) => {
+                    handleFilter(e);
+                  }}
+                />
+                <button
+                  type="submit"
+                  class="fa fa-search search__icon"
+                ></button>
+              </div>
+            </form>
           </div>
           <h1>Published Books</h1>
           <div class="table-responsive-md">
@@ -72,10 +119,7 @@ export default function Book() {
             </table>
           </div>
         </div>
-      </div>
-    </React.Fragment>
-    
-  );
+      </div> */
 }
 
 // {/* <Topbar /> */}
