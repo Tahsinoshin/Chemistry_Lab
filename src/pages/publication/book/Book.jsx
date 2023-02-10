@@ -35,38 +35,64 @@ export default function Book() {
     <React.Fragment>
       <Banner />
       <div className="research-container">
-        <div className="shadow-lg p-3 mb-5 bg-body rounded table-section">
-          <h1>Published Books</h1>
-          <div class="table-responsive-md">
-            <table class="table table-hover table-striped">
-              <tbody>
-                <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>usename</th>
-                </tr>
-                {data &&
-                  data.map((item) => {
-                    return (
-                      <tr>
-                        <td>{item.name}</td>
-                        <td>{item.email}</td>
-                        <td>{item.username}</td>
-                      </tr>
-                    );
-                  })}
-              </tbody>
-            </table>
+        <div class="d-flex justify-content-center h-25">
+          <div class="searchbar">
+            <input
+              class="search_input"
+              type="text"
+              name=""
+              placeholder="Search..."
+              value={filterVal}
+              onInput={(e) => {
+                handleFilter(e);
+              }}
+            />
+            <a href="#" class="search_icon">
+              <i class="fas fa-search"></i>
+            </a>
           </div>
         </div>
-        <div className="contact-section">
-          <h1>contact us</h1>
-          <hr></hr>
-          <span>
-              <p>chemistry@gmail.com</p>
-              <p>0123456789</p>
-              <p>mokarram bhaban,university of dhaka</p> 
-          </span>
+
+        <div className="table-contact">
+          <div
+            className="shadow-lg p-3 mb-5 bg-body rounded table-section"
+            data-aos="fade-in"
+          >
+            <h1>Published Books</h1>
+            <div class="table-responsive-md">
+              <table class="table table-hover table-striped">
+                <tbody>
+                  <tr>
+                    <th>Author</th>
+                    <th>Publication</th>
+                    <th>Year</th>
+                  </tr>
+                  {data &&
+                    data
+                      .sort((a, b) => a.username > b.username)
+                      .map((item) => {
+                        return (
+                          <tr>
+                            <td>{item.name}</td>
+                            <td>{item.email}</td>
+                            <td>{item.username}</td>
+                          </tr>
+                        );
+                      })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div className="contact-section" data-aos="slide-left">
+            <h1>contact us</h1>
+            <hr></hr>
+            <span>
+              <p><span class='material-icons'>place</span>mokarram bhaban,university of dhaka</p>
+              <p><i class="material-icons">&#xe158;</i> chemistry@gmail.com</p>
+              <p><span class="material-icons">local_phone</span>0123456789</p>
+              
+            </span>
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -121,37 +147,3 @@ export default function Book() {
         </div>
       </div> */
 }
-
-// {/* <Topbar /> */}
-// <Searchbar data={list} />
-// <section className="book-main">
-//   <div className="book-container">
-//     <h1>Published Books</h1>
-//     <div class="d-flex justify-content-center">
-//       <table class="table table-striped table-hover">
-//         <thead>
-//           <tr>
-//             <th scope="col">id</th>
-//             <th scope="col">Author</th>
-//             <th scope="col">Publication</th>
-//             <th scope="col">Year</th>
-//           </tr>
-//         </thead>
-
-//         <tbody>
-//           {list.map((li) => {
-//             return (
-//               <tr>
-//                 {/* <th scope="row">1</th> */}
-//                 <td>{li.key}</td>
-//                 <td>{li.author}</td>
-//                 <td><a href={li.publication}>{li.publication}</a></td>
-//                 <td>{li.year}</td>
-//               </tr>
-//             );
-//           })}
-//         </tbody>
-//       </table>
-//     </div>
-//   </div>
-// </section>
