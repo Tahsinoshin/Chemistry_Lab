@@ -9,6 +9,7 @@ import ResearchFacility from './pages/researchFacility/ResearchFacility';
 import Book from './pages/publication/book/Book';
 import Journal from './pages/publication/journal/Journal';
 import Conference from './pages/publication/conference/Conference';
+import AdminDashboard from './pages/adminDashboard/AdminDashboard';
 import { BrowserRouter as Router,  Routes, Route } from "react-router-dom";
 import IndividualFaculty from './pages/people/faculty/IndividualFaculty';
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/publication/conference" element={<Conference/>}/>
           <Route path="/researchfacility" element={<ResearchFacility/>}/>
           <Route path='/people/details/:facultyKey' element={<IndividualFaculty/>}/>
+          <Route path='/adminDashboard' element={<AdminDashboard/>}/>
         </Routes>
   </Router>
   </>
