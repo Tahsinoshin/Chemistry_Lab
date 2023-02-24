@@ -7,10 +7,12 @@ import {
   CDBSidebarMenuItem,
 } from "cdbreact";
 import { NavLink } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 import "./AdminDashboard.css";
 
-export default function adminDashboard() {
+export default function AdminDashboard() {
+  const navigate = useNavigate();
   return (
     <div className="page-container">
       <div
@@ -39,30 +41,54 @@ export default function adminDashboard() {
               <NavLink exact to="/" activeClassName="activeClicked">
                 <CDBSidebarMenuItem icon="columns">Home</CDBSidebarMenuItem>
               </NavLink>
-              <NavLink exact to="/people/faculty" activeClassName="activeClicked">
+              <NavLink
+                exact
+                to="/people/faculty"
+                activeClassName="activeClicked"
+              >
                 <CDBSidebarMenuItem icon="user">
                   Faculty List
                 </CDBSidebarMenuItem>
               </NavLink>
-              <NavLink exact to="/people/graduate" activeClassName="activeClicked">
+              <NavLink
+                exact
+                to="/people/graduate"
+                activeClassName="activeClicked"
+              >
                 <CDBSidebarMenuItem icon="user menu">
                   Graduate List
                 </CDBSidebarMenuItem>
               </NavLink>
-              <NavLink exact to="/people/undergraduate" activeClassName="activeClicked">
+              <NavLink
+                exact
+                to="/people/undergraduate"
+                activeClassName="activeClicked"
+              >
                 <CDBSidebarMenuItem icon="user menu">
                   UnderGraduate List
                 </CDBSidebarMenuItem>
               </NavLink>
-              <NavLink exact to="/publication/book" activeClassName="activeClicked">
+              <NavLink
+                exact
+                to="/publication/book"
+                activeClassName="activeClicked"
+              >
                 <CDBSidebarMenuItem icon="book">Book List</CDBSidebarMenuItem>
               </NavLink>
-              <NavLink exact to="/publication/journal" activeClassName="activeClicked">
+              <NavLink
+                exact
+                to="/publication/journal"
+                activeClassName="activeClicked"
+              >
                 <CDBSidebarMenuItem icon="book">
                   Journal List
                 </CDBSidebarMenuItem>
               </NavLink>
-              <NavLink exact to="/publication/conference" activeClassName="activeClicked">
+              <NavLink
+                exact
+                to="/publication/conference"
+                activeClassName="activeClicked"
+              >
                 <CDBSidebarMenuItem icon="book">
                   Conference List
                 </CDBSidebarMenuItem>
@@ -73,12 +99,11 @@ export default function adminDashboard() {
                 activeClassName="activeClicked"
               >
                 <CDBSidebarMenuItem icon="exclamation-circle">
-                  Logout 
+                  Logout
                 </CDBSidebarMenuItem>
               </NavLink>
             </CDBSidebarMenu>
           </CDBSidebarContent>
-          
         </CDBSidebar>
       </div>
       <div class="vl"></div>
@@ -86,32 +111,61 @@ export default function adminDashboard() {
         <h1 class="w3-center w3-animate-top">dashboard main page</h1>
         <div className="small-divs">
           <div className="first-row">
-            <div class="shadow-lg p-3 mb-5 bg-body rounded" className="small-div">
+            <div
+              class="shadow-lg p-3 mb-5 bg-body rounded"
+              className="small-div"
+            >
               <h3>Faculty Page</h3>
-              <button type="button" class="btn btn-primary">View Page</button>
-                
+              <button type="button" class="btn btn-primary" onClick={()=>navigate("/people/faculty")}>
+                View Page
+              </button>
             </div>
-            <div class="shadow-lg p-3 mb-5 bg-body rounded" className="small-div">
+            <div
+              class="shadow-lg p-3 mb-5 bg-body rounded"
+              className="small-div"
+            >
               <h3>Undergraduate Page</h3>
-              <button type="button" class="btn btn-primary">View Page</button>
+              <button type="button" class="btn btn-primary" onClick={()=>navigate("/people/undergraduate")}>
+                View Page
+              </button>
             </div>
-            <div class="shadow-lg p-3 mb-5 bg-body rounded" className="small-div">
+            <div
+              class="shadow-lg p-3 mb-5 bg-body rounded"
+              className="small-div"
+            >
               <h3>Graduate Page</h3>
-              <button type="button" class="btn btn-primary">View Page</button>
+              <button type="button" class="btn btn-primary" onClick={()=>navigate("/people/graduate")}>
+                View Page
+              </button>
             </div>
           </div>
           <div className="second-row">
-            <div class="shadow-lg p-3 mb-5 bg-body rounded" className="small-div">
+            <div
+              class="shadow-lg p-3 mb-5 bg-body rounded"
+              className="small-div"
+            >
               <h3>Book Page</h3>
-              <button type="button" class="btn btn-primary">View Page</button>
+              <button type="button" class="btn btn-primary" onClick={()=>navigate("/publication/book")}>
+                View Page
+              </button>
             </div>
-            <div class="shadow-lg p-3 mb-5 bg-body rounded" className="small-div">
+            <div
+              class="shadow-lg p-3 mb-5 bg-body rounded"
+              className="small-div"
+            >
               <h3>Journal Page</h3>
-              <button type="button" class="btn btn-primary">View Page</button>
+              <button type="button" class="btn btn-primary" onClick={()=>navigate("/publication/journal")}>
+                View Page
+              </button>
             </div>
-            <div class="shadow-lg p-3 mb-5 bg-body rounded" className="small-div">
-            <h3>Conference Page</h3>
-            <button type="button" class="btn btn-primary">View Page</button>
+            <div
+              class="shadow-lg p-3 mb-5 bg-body rounded"
+              className="small-div"
+            >
+              <h3>Conference Page</h3>
+              <button type="button" class="btn btn-primary" onClick={()=>navigate("/publication/conference")}>
+                View Page
+              </button>
             </div>
           </div>
         </div>
